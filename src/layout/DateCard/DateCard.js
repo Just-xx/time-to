@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Card from "../../components/Card/Card"
 
+import dateContext from '../../contexts/DateContext'
 
 
 const DateText = styled.div`
@@ -17,11 +18,12 @@ const TimeText = styled.div`
 
 const DateCard = () => {
 
+  const dateContextVal = React.useContext(dateContext)
 
   return (
     <Card>
-			<DateText>00-00-0000</DateText>
-			<TimeText>00:00</TimeText>
+      <DateText>{dateContextVal.formattedDate}</DateText>
+			<TimeText>{dateContextVal.formattedTime}</TimeText>
     </Card>
   )
 }
