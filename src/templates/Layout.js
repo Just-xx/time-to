@@ -36,11 +36,10 @@ const CenteredContent = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0 18px;
   box-sizing: border-box;
 
   @media screen and (max-width: 1321px) {
-    width: 90vw;
+    width: 92vw;
   }
 `
 

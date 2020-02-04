@@ -8,15 +8,21 @@ const ItemWrapper = styled(Link)`
   border-left: 4px solid ${({ theme }) => theme.colors.primary};
   border-radius: 3px;
   background-color: #fff;
-  margin: 8px 0;
+  margin: 5px 0;
   padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+  box-shadow: 2px 1px 2px 0px rgba(0, 0, 0, 0.05);
 
   @media screen and (max-width: 712px) {
     padding: 12px 24px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 6px 12px;
+    margin: 4px;
   }
 
   :hover {
@@ -34,6 +40,11 @@ const Name = styled.div`
   
   @media screen and (max-width: 712px) {
     font-size: 0.85rem;
+    margin-right: 80px;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-right: 0px;
   }
 `
 const Date = styled.div`

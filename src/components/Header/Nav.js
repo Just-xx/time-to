@@ -23,12 +23,12 @@ const NavLink = styled(Link)`
     }
 
     @media(max-width: 498px) {
-        margin-right: 10px;
+        margin-right: 15px;
         font-size: 0.75rem;
     }
 
     @media(max-width: 391px) {
-        margin-right: 8px;
+        margin-right: 12px;
         font-size: 0.7rem;
     }
 `
