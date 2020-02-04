@@ -27,6 +27,7 @@ const SEO = ({ subtitle, description }) => {
       <title>{metaTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="theme-color" content="" />
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     </Helmet>
   )
 }
