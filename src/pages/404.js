@@ -1,21 +1,10 @@
-import React from "react"
-import SEO from "../components/SEO/SEO"
-import ContentWrapper from '../components/ContentWrapper/ContentWrapper'
-import Layout from '../layout/Layout/Layout'
-import Header from '../layout/Header/Header'
+import React from 'react'
+import Layout from '../templates/Layout'
 
-const Error404 = () => {
-  return (
-    <>
-      <SEO />
-      <Layout>
-        <Header></Header>
-        <ContentWrapper>
-          404
-        </ContentWrapper>
-      </Layout>
-    </>
-  )
-}
+const Error404 = () => (
+  <Layout subtitle='Nie znaleziono'>
+    404
+  </Layout>
+)
 
 export default Error404

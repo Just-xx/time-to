@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import Logo from '../../components/Logo/Logo'
+import Logo from '../Logo/Logo'
 import Nav from './Nav'
 
 const HeaderWrapper = styled.header`
@@ -8,8 +8,12 @@ const HeaderWrapper = styled.header`
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 ${({ theme }) => theme.sizes.contentMargin};
-    height: 110px;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 1px solid #e4e4e4;
+    margin: 5px 0 20px 0;
 `;
 
 const Header = () => (

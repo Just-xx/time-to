@@ -19,9 +19,9 @@ export const DateProvider = ({ children }) => {
       const date = new Date(fetchedData.data.utc_datetime)
       setDateObj(date)
 
-      const updateCycle = async () => {
+      const updateCycle = () => {
 
-        date.setSeconds(date.getSeconds() + 1)
+        date.setMilliseconds(date.getMilliseconds() + 1000)
         setDateObj(date)
 
         const day = date.getDate()
