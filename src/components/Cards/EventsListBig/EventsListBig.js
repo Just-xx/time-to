@@ -51,7 +51,7 @@ const EventListBig = () => {
 
   return (
     <ListWrapper>
-      <Title>Dostępne odlicznia</Title>
+      <Title>Dostępne odliczania</Title>
       <List>
         {edges.map(({ node }) => (
           <ListItem key={node.path} to={node.path} name={node.context.event.name} date={new Date(node.context.event.date)}/>
