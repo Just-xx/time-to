@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types'
 
 const Card = styled.section`
     display: flex;
@@ -9,7 +10,11 @@ const Card = styled.section`
     padding: 15px 40px;
     border-radius: 5px;
     box-sizing: border-box;
-    box-shadow: 2px 2px 6px 0px rgba(0, 85, 150, 0.1), 2px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    border: ${(props) => !props.noBorder ? '1px solid #dbe8f3' : 'none'};
 `
+
+Card.propTypes = {
+    noBorder: PropTypes.bool
+}
 
 export default Card

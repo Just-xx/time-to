@@ -7,14 +7,13 @@ import { graphql, useStaticQuery } from 'gatsby'
 const ListWrapper = styled(Card)`
   padding: 45px 80px;
   width: 100%;
-  margin-bottom: 20px;
 
   @media screen and (max-width: 712px) {
     padding: 25px 50px;
   }
 
   @media screen and (max-width: 615px) {
-    padding: 25px 24px;
+    padding: 25px 23px;
   }
 `
 

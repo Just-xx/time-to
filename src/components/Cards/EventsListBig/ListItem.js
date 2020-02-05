@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 
 const ItemWrapper = styled(Link)`
+  border: 1px solid #e1e1e1;
   border-left: 4px solid ${({ theme }) => theme.colors.primary};
   border-radius: 3px;
   background-color: #fff;
@@ -14,19 +15,20 @@ const ItemWrapper = styled(Link)`
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  box-shadow: 2px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.05), 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
 
   @media screen and (max-width: 712px) {
     padding: 12px 24px;
   }
 
   @media screen and (max-width: 500px) {
-    padding: 6px 12px;
+    padding: 8px 12px;
     margin: 4px;
   }
 
   :hover {
-    background-color: #dfdfdf;
+    background-color: #ecf7ff;
+    border-color: ${({ theme }) => theme.colors.primary};
   }
 `
 

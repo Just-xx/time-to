@@ -37,6 +37,7 @@ const CenteredContent = styled.div`
   align-items: flex-start;
   flex-direction: column;
   box-sizing: border-box;
+  margin-bottom: 14px;
 
   @media screen and (max-width: 1321px) {
     width: 92vw;

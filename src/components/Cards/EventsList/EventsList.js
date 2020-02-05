@@ -10,7 +10,6 @@ const EventsListWrapper = styled(Card)`
   width: 315px;
 
   @media screen and (max-width: 1321px) {
-    margin-bottom: 20px;
     width: 100%;
   }
 `
@@ -54,7 +53,7 @@ const EventList = () => {
   `)
 
   return (
-    <EventsListWrapper>
+    <EventsListWrapper noBorder>
       <ListTitle>inne liczniki</ListTitle>
       <List>
         {edges.slice(0, 6).map(({ node }) => <ListItem to={node.path} name={node.context.event.name} date={new Date(node.context.event.date)} key={node.path}/>)}

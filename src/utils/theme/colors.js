@@ -3,5 +3,5 @@ export const colors = {
     secondary: '#000',
     slight: '#515151',
     bgc: '#fff',
-    cardBgc: '#f4f6f8'
+    cardBgc: '#fbfdff'
 }
