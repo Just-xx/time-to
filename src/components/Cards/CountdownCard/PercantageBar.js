@@ -16,15 +16,15 @@ const Wrapper = styled.div`
 const PercentText = styled.div`
   color: ${({ theme }) => theme.colors.primary};
   font-weight: ${({ theme }) => theme.font.weight.bold};
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  font-size: 1.1rem;
 `
 
 const BarWrapper = styled.div`
   width: 100%;
-  height: 20px;
-  border-radius: 4px;
-  background-color: #fff;
-  border: 1px solid ${({ theme }) => theme.colors.primary};
+  height: 18px;
+  border-radius: 6px;
+  background-color: #e8e8e8;
   overflow: hidden;
   display: flex;
   justify-content: flex-start;
@@ -33,18 +33,20 @@ const BarWrapper = styled.div`
 
 const Text = styled.div`
   position: absolute;
-  color: #1f3343;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: ${({ theme }) => theme.colors.secondary};
   font-weight: ${({ theme }) => theme.font.weight.bold};
   text-transform: uppercase;
-  font-size: 0.65rem;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
+  font-size: .57rem;
+  border-radius: 2px;
+  opacity: .75;
 `
 
 const Bar = styled.div`
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.primary};;
+  background: ${({ theme }) => theme.colors.primary};
 `
 
 const PercantageBar = ({ percent }) => {
@@ -52,8 +54,8 @@ const PercantageBar = ({ percent }) => {
     <Wrapper>
       <PercentText>{(percent * 100).toFixed(4)}%</PercentText>
       <BarWrapper>
-        <Text>już minęło</Text>
         <Bar style={{ width: `${100 - (percent * 100)}%` }} />
+        <Text>tyle już minęło</Text>
       </BarWrapper>
     </Wrapper>
   )
