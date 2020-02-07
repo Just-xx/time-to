@@ -12,7 +12,9 @@ exports.createPages = async ({ graphql, actions }) => {
         events {
           name,
           date,
-          id
+          id,
+          startedAt,
+          percentage
         }
       }
     }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
 
+import PercantageBar from './PercantageBar'
 import Card from '../CardBase'
 import CountdownTile from './CountdownTile'
 
@@ -81,13 +82,27 @@ const CountdownCard = ({ eventToCount }) => {
   })
 
   const [isEnded, setIsEnded] = useState(false)
+  
+  const [ percentage, setPerceantage ] = useState()
+  const [ isPercentage, setIsPercentage ] = useState(false)
 
 
   useEffect(() => {
     
-    let msBase = new Date(eventToCount.date).getTime() - dateContext.dateObj.getTime()
+    const eventTime = new Date(eventToCount.date).getTime()
+    let msBase = eventTime - dateContext.dateObj.getTime()
     
-    
+    const updatePercantage = () => {
+      const seasonTime = eventTime - new Date(eventToCount.startedAt).getTime()
+      const percantageResult = (msBase / seasonTime)
+
+      setPerceantage(percantageResult)
+    }
+
+    if (eventToCount.percentage) {
+      updatePercantage()
+      setIsPercentage(true)
+    }
 
     if (msBase < 0) {
       setIsEnded(true)
@@ -101,6 +116,9 @@ const CountdownCard = ({ eventToCount }) => {
         setIsEnded(true)
         clearInterval(updateInterval)
       } else {
+
+        if (eventToCount.perceantage) updatePercantage()
+
         setTime({
           days: Math.floor((msBase / units.days.ms)).toString(),
           hours: Math.floor((msBase / units.hours.ms)).toString(),
@@ -108,6 +126,7 @@ const CountdownCard = ({ eventToCount }) => {
           seconds: (msBase / units.seconds.ms).toFixed(3),
           weeks: Math.floor((msBase / units.weeks.ms)).toString()
         })
+
       }
 
     }, 21)
@@ -123,6 +142,7 @@ const CountdownCard = ({ eventToCount }) => {
           {Object.keys(time).map(timeObjKey => (
             <CountdownTile key={timeObjKey} unit={units[timeObjKey].name} time={time[timeObjKey]} />
           ))}
+          {isPercentage && <PercantageBar percent={percentage} />}
         </>
       ) : <CountdownEndedText>Odlliczanie zostało zakończone.</CountdownEndedText>}
     </CountdownContainer>

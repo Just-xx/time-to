@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Time.to`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Odliczanie czasu do wakacji, ferii zimowych, przerwy świątecznej, sylwestra, egzaminów i wiele innych liczników na sezon 2019/2020!`,
     author: `Jakub Dreczkowski`,
   },
   plugins: [
@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#0090ff`,
         theme_color: `#0090ff`,
         display: `minimal-ui`,
-        icon: `src/utils/imgs/logo.svg`, // This path is relative to the root of the site.
+        icon: `src/utils/imgs/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
