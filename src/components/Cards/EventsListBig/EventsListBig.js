@@ -21,11 +21,14 @@ const Title = styled.span`
   font-weight: ${({ theme }) => theme.font.weight.regular};
   font-size: 1.1rem;
   margin-bottom: 20px;
+  text-align: center;
 `
 
 const List = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 `
 
 const EventListBig = () => {

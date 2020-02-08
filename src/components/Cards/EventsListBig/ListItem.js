@@ -9,21 +9,23 @@ const ItemWrapper = styled(Link)`
   border-left: 4px solid ${({ theme }) => theme.colors.primary};
   border-radius: 3px;
   background-color: #fff;
-  margin: 5px 0;
-  padding: 16px 32px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.05), 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
+  
+  padding: 10px;
+  margin: 4px 0;
+  width: 100%;
 
   @media screen and (max-width: 712px) {
-    padding: 12px 24px;
+    margin: 3px 0;
   }
 
   @media screen and (max-width: 500px) {
-    padding: 8px 12px;
-    margin: 4px;
+    margin: 2px 0;
   }
 
   :hover {
@@ -34,23 +36,25 @@ const ItemWrapper = styled(Link)`
 
 const Name = styled.div`
   color: #000;
-  font-size: 0.95rem;
-  margin-right: 100px;
+  font-size: .95rem;
   text-overflow: ellipsis;
   overflow: hidden;
   max-height: 70px;
+  white-space: pre-line;
+  margin-right: 20px;
   
   @media screen and (max-width: 712px) {
     font-size: 0.85rem;
-    margin-right: 80px;
+    /* margin-right: 80px; */
   }
 
   @media screen and (max-width: 500px) {
-    margin-right: 0px;
+    margin-right: 5px;
+    font-size: .8rem;
   }
 `
 const Date = styled.div`
-  color: ${({ theme }) => theme.colors.slight};;
+  color: ${({ theme }) => theme.colors.slight};
   font-size: 0.9rem;
   white-space: nowrap;
 

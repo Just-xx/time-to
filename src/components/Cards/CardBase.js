@@ -10,7 +10,7 @@ const Card = styled.section`
     padding: 15px 40px;
     border-radius: 5px;
     box-sizing: border-box;
-    border: ${(props) => !props.noBorder ? '1px solid #ced3d7' : 'none'};
+    border: ${(props) => !props.noBorder ? `1px solid ${props.theme.colors.cardBorder}` : 'none'};
 `
 
 Card.propTypes = {

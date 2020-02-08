@@ -3,5 +3,6 @@ export const colors = {
     secondary: '#000',
     slight: '#515151',
     bgc: '#fff',
-    cardBgc: '#fbfdff'
+    cardBgc: '#fbfdff',
+    cardBorder: '#ced3d7'
 }

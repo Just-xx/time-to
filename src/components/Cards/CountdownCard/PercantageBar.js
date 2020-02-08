@@ -7,7 +7,9 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 26px;
+  margin-top: 10px;
+  padding-top: 32px;
+  border-top: 1px solid ${({ theme }) => theme.colors.cardBorder};
   align-items: center;
   justify-content: flex-start;
 `
@@ -16,8 +18,8 @@ const Wrapper = styled.div`
 const PercentText = styled.div`
   color: ${({ theme }) => theme.colors.primary};
   font-weight: ${({ theme }) => theme.font.weight.bold};
-  margin-bottom: 4px;
-  font-size: 1.1rem;
+  margin-bottom: 8px;
+  font-size: 1rem;
 `
 
 const BarWrapper = styled.div`
