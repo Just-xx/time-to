@@ -33,7 +33,7 @@ const BarWrapper = styled.div`
   position: relative;
 `
 
-const Text = styled.div`
+const BarText = styled.div`
   position: absolute;
   top: 50%;
   right: 10px;
@@ -41,9 +41,9 @@ const Text = styled.div`
   color: ${({ theme }) => theme.colors.secondary};
   font-weight: ${({ theme }) => theme.font.weight.bold};
   text-transform: uppercase;
-  font-size: .57rem;
+  font-size: .51rem;
   border-radius: 2px;
-  opacity: .75;
+  opacity: .55;
 `
 
 const Bar = styled.div`
@@ -57,7 +57,7 @@ const PercantageBar = ({ percent }) => {
       <PercentText>{(percent * 100).toFixed(4)}%</PercentText>
       <BarWrapper>
         <Bar style={{ width: `${100 - (percent * 100)}%` }} />
-        <Text>tyle już minęło</Text>
+        <BarText>tyle już minęło</BarText>
       </BarWrapper>
     </Wrapper>
   )
