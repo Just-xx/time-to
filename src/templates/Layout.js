@@ -7,17 +7,20 @@ import PropTypes from 'prop-types'
 import SEO from '../components/SEO/SEO'
 
 const GlobalStyles = createGlobalStyle`
-    html, body {
-        margin: 0;
-        padding: 0;
-        font-family: ${({ theme }) => theme.font.family};
-        font-size: ${({ theme }) => theme.font.defSize};
-    }
 
-    * {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=latin-ext');
+
+  html, body {
+      margin: 0;
+      padding: 0;
+      font-family: ${({ theme }) => theme.font.family};
+      font-size: ${({ theme }) => theme.font.defSize};
+  }
+
+  * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
 `
 
 const GlobalWrapper = styled.div`
